@@ -1,30 +1,4 @@
 # elec5305-project-510019277
 # Comparative Study of Music Synthesis Techniques
 
-## Project Overview
-This project investigates **music synthesis** using two classic approaches:  
-- **Additive Synthesis** – generating tones by summing harmonically related sinusoids.  
-- **Frequency Modulation (FM) Synthesis** – using a carrier and modulator to create complex timbres.  
-
-The goal is to compare these methods in terms of their **spectral characteristics, computational efficiency, and perceptual quality**. The project is part of **ELEC5305 – Acoustics, Speech and Signal Processing**.
-
----
-
-## Motivation
-Music synthesis lies at the intersection of **digital signal processing** and **sound design**. Additive synthesis offers fine control over harmonic content, while FM synthesis efficiently produces rich, evolving tones. Understanding their differences provides insight into **modern synthesizer design** and highlights trade-offs between **control, efficiency, and timbral richness**.
-
----
-
-## Methodology
-- Implement additive and FM synthesis in **MATLAB**.  
-- Shape sounds using **ADSR envelopes**.  
-- Analyze harmonic content with **Fourier Transform** and **spectrograms**.  
-- Compare methods using both **objective measures** (spectral centroid, bandwidth) and **subjective listening tests**.
-
----
-
-## Expected Outcomes
-- MATLAB code for additive and FM synthesis.  
-- Audio demos showcasing synthesized tones.  
-- Plots of waveforms, magnitude spectra, and spectrograms.  
-- A discussion of strengths, limitations, and applications of each synthesis method.
+This project explores music synthesis as an application of audio signal processing, focusing on the comparison between Additive Synthesis and Frequency Modulation (FM) Synthesis. Additive synthesis builds tones by summing harmonically related sinusoids, offering precise control over harmonic structure but at a high computational cost. FM synthesis, on the other hand, achieves complex and evolving timbres efficiently by modulating a carrier with a secondary oscillator, a method that became widely adopted in commercial synthesizers such as the Yamaha DX7. Using MATLAB and the Signal Processing Toolbox, this project implements both techniques, applies ADSR envelopes for dynamic shaping, and evaluates their outputs through spectral analysis (FFT, STFT) and informal listening tests. The expected outcomes include a documented MATLAB codebase, spectral plots, synthesized audio demonstrations, and a comparative discussion on the trade-offs between control, efficiency, and perceptual quality.
