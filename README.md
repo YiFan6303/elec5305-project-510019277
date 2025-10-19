@@ -135,7 +135,6 @@ tuba/*.mp3
 ### Steps
 
 1. **Clone and prepare**
-```bash
 git clone https://github.com/<your-username>/elec5305-project-510019277.git
 cd elec5305-project-510019277
 Place audio under dataset/<instrument>/*.mp3|wav|flac|aif.
