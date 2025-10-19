@@ -90,6 +90,12 @@ Spectral features (centroid, bandwidth, rolloff, ZCR, MFCC mean/std) were extrac
 
 ---
 
+
+## 🏁 Current Status
+All synthesis, spectral analysis, and machine-learning modules are completed.
+Next stage: refine dataset and add ADSR envelope for improved realism.
+
+
 ## 📈 Future Work
 
 1. **Expand dataset:** increase `(r, I)` grid density and tone duration for improved ML regression accuracy.  
