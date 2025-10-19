@@ -102,22 +102,19 @@ Spectral features (centroid, bandwidth, rolloff, ZCR, MFCC mean/std) were extrac
 
 ## 📦 Repository Structure
 
-elec5305-project-510019277/
-│
-├─ src/
-│ └─ synthesis/
-│ ├─ additive_synth.m
-│ ├─ fm_synth.m
-│ └─ adsr.m
-│
-├─ results/
-│ ├─ audio/ ← synthesized WAV files
-│ ├─ plots/ ← spectrograms & ML scatter plots
-│ └─ ml/ ← metrics.csv and ML outputs
-│
-├─ main_synthesis_demo.mlx
-├─ main_ml_pipeline.mlx
-└─ Project Proposal.pdf
+- **src/**
+  - **synthesis/**
+    - `additive_synth.m` – additive synthesis implementation  
+    - `fm_synth.m` – frequency modulation synthesis implementation  
+    - `adsr.m` – amplitude envelope (Attack–Decay–Sustain–Release)
+- **results/**
+  - **audio/** – synthesized WAV files  
+  - **plots/** – spectrograms and ML scatter plots  
+  - **ml/** – metrics.csv and ML results
+- `main_synthesis_demo.mlx` – main synthesis demo script  
+- `main_ml_pipeline.mlx` – machine learning pipeline  
+- `Project Proposal.pdf` – initial project proposal
+
 
 
 ---
