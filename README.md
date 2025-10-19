@@ -1,8 +1,106 @@
-# elec5305-project-510019277
-# Comparative Study of Music Synthesis Techniques
+# elec5305-project-510019277  
+**Comparative Study of Music Synthesis Techniques**
 
-This project investigates music synthesis as a concrete application of audio signal processing, with a head-to-head comparison between Additive Synthesis and Frequency Modulation (FM) Synthesis. Additive synthesis constructs tones by summing harmonically related sinusoids to control the spectrum explicitly, which is powerful for instrument-like timbres but can be computationally heavy when many partials are required. FM synthesis, by contrast, achieves rich, evolving timbres by modulating a carrier with a secondary oscillator; small changes in the modulation index and frequency ratio produce distinctive sideband patterns, offering high timbral variety with few parameters. Using MATLAB Signal Processing Toolbox, I implement both approaches with configurable ADSR envelopes for temporal shaping and generate a suite of tones across pitches and parameter settings. All primary audio material is synthesized in MATLAB; where helpful for context, short reference snippets of real instruments may be used to illustrate similarities and differences.
+---
 
-Evaluation combines objective spectral analysis and listening-based judgments. I compute magnitude spectra and STFT spectrograms and summarize timbre with metrics such as spectral centroid, bandwidth, and a simple harmonic distortion proxy; I also record runtime to compare computational efficiency for matched target timbres. Informal listening tests (A/B comparisons) complement these measurements to assess naturalness and musical usefulness. The repository will include a documented MATLAB codebase (modular functions for additive/FM engines, envelope generation, batch rendering, and analysis), reproducible scripts to regenerate figures and audio, and a short comparative write-up discussing trade-offs—control (additive) vs efficiency (FM), and predictable harmonic design vs emergent complexity. Expected artifacts are waveform/spectrum/spectrogram plots, WAV demos, and a concise discussion that links observed results to established synthesis theory, providing a practical, extensible baseline for future hybrids or real-time variants.
+## 🎧 Project Overview
+
+This project investigates **music synthesis** as a concrete application of digital audio signal processing, focusing on a comparative analysis between **Additive Synthesis** and **Frequency Modulation (FM) Synthesis**.  
+Additive synthesis constructs tones by summing harmonically related sinusoids, offering explicit control over harmonic structure but requiring high computational cost for complex timbres.  
+FM synthesis, in contrast, achieves rich, evolving timbres efficiently by modulating a carrier with a secondary oscillator, producing complex sidebands from a small parameter set.  
+
+The goal of this project is to analyze and implement both techniques in **MATLAB**, visualize their spectral structures, and apply **machine learning** to automatically predict FM synthesis parameters from spectral features — bridging traditional DSP with data-driven modeling.
+
+---
+
+## 📚 Background and Motivation
+
+Early sound synthesis relied on additive methods, representing tones as sums of harmonics based on Fourier principles.  
+FM synthesis (John Chowning, 1973) revolutionized digital sound design by enabling complex spectra generation through frequency modulation, leading to efficient real-time synthesis in instruments such as the **Yamaha DX7**.  
+
+Additive synthesis provides precise harmonic control, suitable for instrument modeling, whereas FM synthesis provides expressive timbre control with fewer parameters.  
+This study builds both systems, compares their **spectral behavior and efficiency**, and introduces an ML-based regression model to predict FM parameters from spectral data, following the philosophy of **Differentiable DSP (DDSP)**.
+
+---
+
+## 🧰 Implementation Overview
+
+**Tools & Platform:** MATLAB (Signal Processing Toolbox)  
+**Core techniques:**  
+- Additive and FM Synthesis  
+- Spectral Analysis (FFT, STFT, spectral centroid, bandwidth, rolloff, MFCC)  
+- Ridge Regression Machine Learning (predicting FM parameters)  
+- Evaluation via log-STFT spectral loss and perceptual comparison  
+
+**Data Source:**  
+All audio is synthesized directly within MATLAB using the implemented algorithms.  
+No external datasets are required.  
+Each tone (A4 = 440 Hz, 0.8 s duration) is generated with different FM parameters `(r, I)`.
+
+---
+
+## 🧪 Current Progress
+
+Implemented baseline **Additive** and **FM** synthesizers in MATLAB, generated demo audio files and visualized their spectrograms.
+
+- **Additive synthesis:** distinct harmonic lines spaced at multiples of the fundamental frequency.  
+- **FM synthesis:** rich sideband structures depending on frequency ratio `r` and modulation index `I`.
+
+### 🔊 Audio Demos
+- [Additive demo](results/audio/additive_A4.wav)  
+- [FM demo (r=2, I=4)](results/audio/fm_A4_r2_I4.wav)
+
+### 🖼️ Spectrograms
+- [Additive spectrogram](results/plots/additive_A4_spec.png)  
+- [FM spectrogram](results/plots/fm_A4_r2_I4_spec.png)
+
+---
+
+## 📊 Spectral Observations
+
+A parameter sweep was performed for `r ∈ {0.5, 1, 2}` and `I ∈ {0, 2, 4, 6}`.  
+Key findings from frequency-domain analysis:
+
+- Increasing **modulation index (I)** broadens the bandwidth and raises the **spectral centroid**, producing brighter timbres.  
+- Changing **ratio (r)** shifts sideband spacing, altering harmonic alignment and perceived color.  
+- Additive synthesis shows discrete harmonics, while FM synthesis generates continuous spectral clusters.
+
+---
+
+## 🤖 Machine Learning Results – FM Parameter Prediction
+
+We synthesized an FM dataset on a grid of ratios `r ∈ {0.5, 1, 2}` and indices `I ∈ {0, 2, 4, 6}` (12 samples).  
+Spectral features (centroid, bandwidth, rolloff, ZCR, MFCC mean/std) were extracted and used to train **ridge regression models** predicting `(r, I)`.
+
+**Test metrics** (see [`results/ml/metrics.csv`](results/ml/metrics.csv)):  
+| Metric | r | I |
+|:--|:--:|:--:|
+| MAE | 0.554 | 1.776 |
+| R² | 0.169 | 0.268 |
+| Mean log-STFT L₁ |    –    |    3.530    |
+
+**Plots:**  
+- [True vs Predicted Scatter](results/plots/ml_scatter_true_vs_pred.png)  
+- [Spectrogram Comparison (True vs Predicted)](results/plots/ml_spectrogram_true_vs_pred.png)
+
+**Observations:**  
+- Predictions show moderate alignment between true and estimated parameters.  
+- `I` influences timbral brightness strongly, while `r` is subtler to regress due to overlapping spectral patterns.  
+- The ML module successfully demonstrates a **data-driven synthesis control** pipeline—an interpretable counterpart to DDSP’s learned parameter estimation.
+
+---
+
+## 📈 Future Work
+
+1. **Expand dataset:** increase `(r, I)` grid density and tone duration for improved ML regression accuracy.  
+2. **Add ADSR envelopes:** simulate realistic instrument dynamics.  
+3. **Integrate additive synthesis** into the ML stage for feature comparison.  
+4. **Evaluate computational efficiency** (runtime vs model accuracy).  
+5. **Extend toward DDSP-style models**, using neural networks to learn continuous synthesis control.
+
+---
+
+## 📦 Repository Structure
+
 
 [Download Project Proposal (PDF)](Project%20Proposal.pdf)
