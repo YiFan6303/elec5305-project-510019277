@@ -102,5 +102,43 @@ Spectral features (centroid, bandwidth, rolloff, ZCR, MFCC mean/std) were extrac
 
 ## 📦 Repository Structure
 
+elec5305-project-510019277/
+│
+├─ src/
+│ └─ synthesis/
+│ ├─ additive_synth.m
+│ ├─ fm_synth.m
+│ └─ adsr.m
+│
+├─ results/
+│ ├─ audio/ ← synthesized WAV files
+│ ├─ plots/ ← spectrograms & ML scatter plots
+│ └─ ml/ ← metrics.csv and ML outputs
+│
+├─ main_synthesis_demo.mlx
+├─ main_ml_pipeline.mlx
+└─ Project Proposal.pdf
+
+
+---
+
+## 🧾 References
+
+- Reid, G. (2000). *An Introduction to Additive Synthesis.* Sound on Sound.  
+- Reid, G. (2000). *An Introduction to Frequency Modulation.* Sound on Sound.  
+- Smith, J. O. (n.d.). *Spectral Audio Signal Processing.* DSPRelated.  
+- Synclavier Digital (2019). *What is Additive Synthesis Anyway?*  
+- Wikipedia (2025). *Additive Synthesis.*  
+- Wikipedia (2024). *Frequency Modulation Synthesis.*  
+- Chowning, J. M. (1973). *The Synthesis of Complex Audio Spectra by Means of Frequency Modulation.* JAES.
+
+---
+
+## 👤 Author
+**Yi Fan (SID 510019277)**  
+University of Sydney – ELEC5305 Acoustics, Speech and Signal Processing  
+Semester 2 – 2025
+
+
 
 [Download Project Proposal (PDF)](Project%20Proposal.pdf)
