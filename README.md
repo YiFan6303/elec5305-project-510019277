@@ -225,18 +225,38 @@ All synthesis, spectral analysis, and machine-learning modules are completed.
 
 ## 📦 Repository Structure
 
-- **src/**
-  - **synthesis/**
+- **dataset/**  
+  raw Philharmonia instrument dataset (organized by class folders for model training)
+
+- **demo_data/**  
+  demo audio clips used for instrument recognition demonstration (e.g., trombone, flute, cello)
+
+- **results/**  
+  stores all generated experiment outputs  
+  - **ml/**  
+    - `philharmonia_features.mat` – cached extracted timbre features  
+    - `instrument_classifier.mat` – trained ML model (best-performing SVM)  
+    - `demo_segment_scores.csv` – per-segment prediction confidence (from demo)  
+    - `confusion_matrix.png` – classification results visualization  
+    - `tsne_visualization.png` – PCA + t-SNE feature space visualization  
+    - `demo_wave_spectrogram.png` – waveform + spectrogram of demo audio  
+    - `demo_heatmap.png` – per-class confidence heatmap across time  
+
+- **src/**  
+  MATLAB source scripts (earlier synthesis study modules for timbre understanding)  
+  - **synthesis/**  
     - `additive_synth.m` – additive synthesis implementation  
     - `fm_synth.m` – frequency modulation synthesis implementation  
-    - `adsr.m` – amplitude envelope (Attack–Decay–Sustain–Release)
-- **results/**
-  - **audio/** – synthesized WAV files  
-  - **plots/** – spectrograms and ML scatter plots  
-  - **ml/** – metrics.csv and ML results
-- `main_synthesis_demo.mlx` – main synthesis demo script  
-- `main_ml_pipeline.mlx` – machine learning pipeline  
-- `Project Proposal.pdf` – initial project proposal
+    - `adsr.m` – amplitude envelope (Attack–Decay–Sustain–Release)  
+
+- `extract_philharmonia_features.mlx` – feature extraction pipeline for Philharmonia dataset  
+- `train_instrument_classifier.mlx` – machine learning training (RF, SVM, kNN, NB comparison)  
+- `main_ml_pipeline.mlx` – integrated ML workflow (extract → train → evaluate)  
+- `predict_instrument_demo.mlx` – segment-wise instrument classification demo with visualization  
+- `main_synthesis_demo.mlx` – additive vs FM synthesis comparison (for spectral analysis)  
+- `Project Proposal.pdf` – initial project proposal document  
+- `README.md` – main documentation and milestone summary
+
 
 
 
