@@ -5,6 +5,8 @@ This README explains exactly how to run the project, how to train the model, and
 # 🎬 Project Demo Video  
 **Watch here:** (https://www.youtube.com/watch?v=k7hBRjcPYtQ)
 Please set the playback quality to HD when watching, as it provides a much clearer presentation!
+# 📄 Project Report  
+👉 https://github.com/YiFan6303/elec5305-project-510019277/blob/main/Yi_Fan_510019277_Project_Report.pdf
 ---
 
 # 1. Project Structure
