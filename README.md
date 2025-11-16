@@ -98,7 +98,6 @@ Next, you need to run the
 ```matlab
 train_instrument_classifier
 ```
- to load all the audio.
  
 This script:
 
