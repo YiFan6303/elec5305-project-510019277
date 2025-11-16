@@ -54,7 +54,7 @@ project_root/
 ---
 
 # 3. How to Run the Full ML Pipeline
-
+### **Step 1 **
 Use the integrated pipeline:
 
 1. Open MATLAB and set this folder as your working directory.
@@ -70,9 +70,9 @@ After it finishes, you will have to:
 ---
 
 
-### **Then you need to run the main_ml_pipeline**
+Then you need to run the main_ml_pipeline
 
-### **Then you need to run the extract_philharmonia_features to load all the test audio**
+Then you need to run the extract_philharmonia_features to load all the test audio
 
 ```matlab
 extract_philharmonia_features
