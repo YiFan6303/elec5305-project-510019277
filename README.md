@@ -72,10 +72,16 @@ main_synthesis_demo
 After it finishes, you will have to:
 
 
-Then you need to run the main_ml_pipeline
+Then you need to run the 
+```matlab
+main_ml_pipeline
+```
 
-
-Then you need to run the extract_philharmonia_features to load all the test audio
+Then you need to run the 
+```matlab
+extract_philharmonia_features
+```
+to load all the test audio
 
 ```matlab
 extract_philharmonia_features
