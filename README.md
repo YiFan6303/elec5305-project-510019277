@@ -137,7 +137,7 @@ It will:
 In `predict_instrument_demo.mlx`, find this line:
 
 ```matlab
-testfile = "demo_data/cello_example.mp3";
+testFile = "demo_data/Unknown_Instrument/saxophone_G3_phrase_mezzo-forte_staccato.mp3"; % Change to any test audio;
 ```
 
 To test another known instrument:
@@ -149,7 +149,7 @@ testfile = "demo_data/flute_demo.wav";
 To test an unknown instrument (e.g., piano):
 
 ```matlab
-testfile = "demo_data/piano_unknown.mp3";
+testfile = "demo_data/cello_A2_15_pianissimo_arco-normal.wav";
 ```
 
 ---
@@ -170,7 +170,7 @@ demo_data/
 ### 3. Set path:
 
 ```matlab
-testfile = "demo_data/piano_unknown.mp3";
+testfile = "demo_data/Unknown_Instrument/mandolin_C5_very-long_piano_normal.wav";
 ```
 
 ### 4. The system automatically applies:
@@ -200,7 +200,6 @@ dataset/
 ### 2. Ensure structure:
 
 ```
-dataset/instrument_name/*.mp3
 dataset/instrument_name2/*.wav
 ```
 
