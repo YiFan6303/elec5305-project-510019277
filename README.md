@@ -72,7 +72,7 @@ main_synthesis_demo
 After it finishes, you will have to:
 
 
-Then you need to run the 
+run the 
 ```matlab
 main_ml_pipeline
 ```
