@@ -46,7 +46,7 @@ project_root/
 
 # 2. Software Requirements
 
-- MATLAB R2023b or later  
+- MATLAB R2025a  
 - Audio Toolbox  
 - Statistics and Machine Learning Toolbox  
 - (Optional) Signal Processing Toolbox  
@@ -54,12 +54,6 @@ project_root/
 ---
 
 # 3. How to Run the Full ML Pipeline
-
-There are **two ways** to run the project:
-
----
-
-## Method A — Run Everything Automatically
 
 Use the integrated pipeline:
 
@@ -70,27 +64,15 @@ Use the integrated pipeline:
 main_ml_pipeline
 ```
 
-This single script performs:
 
-- Load training dataset  
-- Extract timbre features  
-- Train RF / SVM / kNN / NB  
-- Auto-select best model  
-- Save trained classifier  
-- Export confusion matrices & t-SNE plots  
-
-After it finishes, you will have:
-
+After it finishes, you will have to:
 ```
-results/ml/philharmonia_features.mat
-results/ml/instrument_classifier.mat
-```
-
 ---
 
-## Method B — Step-by-step
 
-### **Step 1 — Feature extraction**
+### **Then you need to run the main_synthesis_demo**
+
+### **Then you need to run the extract_philharmonia_features to load all the test audio**
 
 ```matlab
 extract_philharmonia_features
