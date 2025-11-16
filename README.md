@@ -2,6 +2,9 @@
 
 This README explains exactly how to run the project, how to train the model, and how to test any audio file.
 
+# 🎬 Project Demo Video  
+**Watch here:** [https://youtu.be/你的链接](https://www.youtube.com/watch?v=k7hBRjcPYtQ)
+
 ---
 
 # 1. Project Structure
