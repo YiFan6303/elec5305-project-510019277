@@ -83,9 +83,6 @@ extract_philharmonia_features
 ```
 to load all the test audio
 
-```matlab
-extract_philharmonia_features
-```
 
 Outputs:
 
