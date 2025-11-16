@@ -94,10 +94,12 @@ results/ml/philharmonia_features.mat
 
 ### **Step 2 — Train classifier**
 
+Next, you need to run the
 ```matlab
 train_instrument_classifier
 ```
-
+ to load all the audio.
+ 
 This script:
 
 - Loads features  
