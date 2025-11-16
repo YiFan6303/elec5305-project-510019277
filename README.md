@@ -165,7 +165,7 @@ testFile = "demo_data/double-bass_G3_1_forte_arco-normal.mp3"; % Change to any t
 To test an unknown instrument (e.g., piano):
 You can open the 'demo_data' file and then open the 'Unknown_Instrument' file to copy any audio's name, and then change to:
 ```matlab
-testfile = "demo_data/Unknown_Instrument/**paste the the audio name here** .mp3";
+testfile = "demo_data/Unknown_Instrument/**paste the the audio name here**.mp3";
 ```
 For example:
 
@@ -191,13 +191,13 @@ Otherwise MATLAB will treat it as a known class.
 ### 2. Put unknown audio inside:
 
 ```
-demo_data/
+demo_data/Unknown_Instrument
 ```
 
 ### 3. Set path:
 
 ```matlab
-testfile = "demo_data/Unknown_Instrument/mandolin_C5_very-long_piano_normal.mp3";
+testfile = "demo_data/Unknown_Instrument/**paste the the audio name here**.mp3";
 ```
 
 ### 4. The system automatically applies:
@@ -214,32 +214,8 @@ FINAL DECISION: Unknown Instrument
 
 ---
 
-# 7. Replacing the Dataset (Optional)
 
-If you want to change the training dataset:
-
-### 1. Replace folders under:
-
-```
-dataset/
-```
-
-### 2. Ensure structure:
-
-```
-dataset/instrument_name2/*.mp3
-```
-
-### 3. Re-run:
-
-```matlab
-extract_philharmonia_features
-train_instrument_classifier
-```
-
----
-
-# 8. Additive & FM Synthesis (Optional Part)
+# 7. Additive & FM Synthesis 
 
 To run synthesis demos:
 
@@ -258,7 +234,7 @@ These demonstrate harmonic structure differences between synthesis methods.
 
 ---
 
-# 9. Summary of All Key Scripts
+# 8. Summary of All Key Scripts
 
 | Script | Purpose |
 |-------|---------|
@@ -271,7 +247,7 @@ These demonstrate harmonic structure differences between synthesis methods.
 
 ---
 
-# 10. Troubleshooting
+# 9. Troubleshooting
 
 ### **Q1. Demo outputs “Unknown Instrument” for everything?**
 
@@ -293,7 +269,7 @@ All scripts auto-create required directories.
 
 ---
 
-# 11. Author
+# 10. Author
 
 Yi Fan (SID: 510019277)  
 University of Sydney  
