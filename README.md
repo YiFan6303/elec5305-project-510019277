@@ -151,14 +151,15 @@ To test another known instrument:
 You can open the 'demo_data' file to copy any audio's name, and then change to:
 
 ```matlab
-testFile = "demo_data/ paste the the audio name here.mp3"; % Change to any test audio;
+testFile = "demo_data/ **paste the the audio name here**.mp3"; % Change to any test audio;
 ```
 
 To test an unknown instrument (e.g., piano):
 You can open the 'demo_data' file and then open the 'Unknown_Instrument' file to copy any audio's name, and then change to:
 ```matlab
-testfile = "demo_data/Unknown_Instrument/ paste the the audio name here .mp3";
+testfile = "demo_data/Unknown_Instrument/ **paste the the audio name here** .mp3";
 ```
+It is important to add 'Unknown_Instrument/' before the audio name when testing the unknnown instrument!
 
 ---
 
