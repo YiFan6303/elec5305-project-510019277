@@ -23,9 +23,9 @@ project_root/
 │   └─ ... (one folder per instrument)
 │
 ├─ demo_data/                    # Test audio for demo 
-│   ├─ cello_A2_15_pianissimo_arco-normal.wav
+│   ├─ cello_A2_15_pianissimo_arco-normal.mp3
 │   └─Unknown_Instrument
-│           └─mandolin_As4_very-long_piano_normal.wav
+│           └─mandolin_As4_very-long_piano_normal.mp3
 │
 ├─ results/
 │   ├─ ml/
@@ -148,15 +148,16 @@ testFile = "demo_data/Unknown_Instrument/saxophone_G3_phrase_mezzo-forte_staccat
 ```
 
 To test another known instrument:
+You can open the 'demo_data' file to copy any audio's name, and then change to:
 
 ```matlab
-testfile = "demo_data/flute_demo.wav";
+testFile = "demo_data/ paste the the audio name here.mp3"; % Change to any test audio;
 ```
 
 To test an unknown instrument (e.g., piano):
-
+You can open the 'demo_data' file and then open the 'Unknown_Instrument' file to copy any audio's name, and then change to:
 ```matlab
-testfile = "demo_data/cello_A2_15_pianissimo_arco-normal.wav";
+testfile = "demo_data/Unknown_Instrument/ paste the the audio name here .mp3";
 ```
 
 ---
@@ -177,7 +178,7 @@ demo_data/
 ### 3. Set path:
 
 ```matlab
-testfile = "demo_data/Unknown_Instrument/mandolin_C5_very-long_piano_normal.wav";
+testfile = "demo_data/Unknown_Instrument/mandolin_C5_very-long_piano_normal.mp3";
 ```
 
 ### 4. The system automatically applies:
@@ -207,7 +208,7 @@ dataset/
 ### 2. Ensure structure:
 
 ```
-dataset/instrument_name2/*.wav
+dataset/instrument_name2/*.mp3
 ```
 
 ### 3. Re-run:
@@ -230,8 +231,8 @@ main_synthesis_demo
 Outputs:
 
 ```
-results/audio/additive_A4.wav
-results/audio/fm_A4_r2_I4.wav
+results/audio/additive_A4.mp3
+results/audio/fm_A4_r2_I4.mp3
 ```
 
 These demonstrate harmonic structure differences between synthesis methods.
