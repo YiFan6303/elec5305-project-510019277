@@ -154,7 +154,9 @@ You can open the 'demo_data' file to copy any audio's name, and then change to:
 testFile = "demo_data/**paste the the audio name here**.mp3"; % Change to any test audio;
 ```
 For example:
-If the audio name is: double-bass_G3_1_forte_arco-normal
+
+If the audio name is: 'double-bass_G3_1_forte_arco-normal'
+
 then you need to change to:
 ```matlab
 testFile = "demo_data/double-bass_G3_1_forte_arco-normal.mp3"; % Change to any test audio;
@@ -166,12 +168,16 @@ You can open the 'demo_data' file and then open the 'Unknown_Instrument' file to
 testfile = "demo_data/Unknown_Instrument/**paste the the audio name here** .mp3";
 ```
 For example:
-If the audio name is: saxophone_Gs5_long_forte_major-trill
+
+If the audio name is: 'saxophone_Gs5_long_forte_major-trill'
+
 then you need to change to:
 ```matlab
 testFile = "demo_data/Unknown_Instrument/saxophone_Gs5_long_forte_major-trill.mp3"; % Change to any test audio;
 ```
 It is important to add 'Unknown_Instrument/' before the audio name when testing the unknnown instrument!
+
+Also be careful about the audio format. If an error occurs, please check the fromat of the audio, normally it is .mp4, but if error occurs, please change to .wav to check if it works.
 
 ---
 
