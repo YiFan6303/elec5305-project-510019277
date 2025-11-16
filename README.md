@@ -19,9 +19,10 @@ project_root/
 │   ├─ tuba/
 │   └─ ... (one folder per instrument)
 │
-├─ demo_data/                    # Test audio for demo (you may replace with your own)
-│   ├─ cello_example.mp3
-│   └─ piano_unknown.mp3
+├─ demo_data/                    # Test audio for demo 
+│   ├─ cello_A2_15_pianissimo_arco-normal.wav
+│   └─Unknown_Instrument
+│           └─mandolin_As4_very-long_piano_normal.wav
 │
 ├─ results/
 │   ├─ ml/
@@ -49,7 +50,7 @@ project_root/
 - MATLAB R2025a  
 - Audio Toolbox  
 - Statistics and Machine Learning Toolbox  
-- (Optional) Signal Processing Toolbox  
+- Signal Processing Toolbox  
 
 ---
 
