@@ -83,7 +83,7 @@ Important:
 
 (The next step can be igonred to save time because it will take a lot of time to load all the test audio, there are 6000 testing audio, so you can ignore the next step to save time because I already load all the audio and save the result in 'results/ml/philharmonia_features.mat')
 
-Then you need to run the (optional step)
+(optional step) Then you need to run the 
 ```matlab
 extract_philharmonia_features
 ```
