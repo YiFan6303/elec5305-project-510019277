@@ -4,7 +4,7 @@ This README explains exactly how to run the project, how to train the model, and
 
 # 🎬 Project Demo Video  
 **Watch here:** (https://www.youtube.com/watch?v=k7hBRjcPYtQ)
-
+Please set the playback quality to HD when watching, as it provides a much clearer presentation!
 ---
 
 # 1. Project Structure
